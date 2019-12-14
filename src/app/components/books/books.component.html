@@ -1,0 +1,30 @@
+<div class="wraper">
+    <span class="text-muted fSize">Bookshelf</span>
+</div>
+<div class="row">
+    <div class="search-wraper">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"
+                (ngModelChange)='setTypedSearch($event)' autofocus />
+            <div class="result-box">
+                <ul class="list-group mb-1">
+                    <li *ngFor='let book of pageOfItems' class="list-group-item">
+                        <button class="btn" (click)='openMoreDetails(book)'>
+                            <div class="result-wrap">
+                                <span>{{ book.volumeInfo.title }}</span>
+                                <span class="book-img-wrap">
+                                    <img
+                                        src="{{ (book.volumeInfo.imageLinks.thumbnail != undefined ) ? book.volumeInfo.imageLinks.thumbnail : 'https://sciences.ucf.edu/psychology/wp-content/uploads/sites/63/2019/09/No-Image-Available.png'  }}">
+                                </span>
+                            </div>
+                        </button>
+                    </li>
+                    <li *ngIf='searchText !== "" && pageOfItems === undefined' class="list-group-item ">
+                        No results containing your search terms.
+                    </li>
+                </ul>
+                <jw-pagination *ngIf='db != undefined' [items]="db" (changePage)="onChangePage($event)"></jw-pagination>
+            </div>
+        </div>
+    </div>
+</div>

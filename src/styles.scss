@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  background-color: #f2f3f8;
+}
+
+.cdk-global-overlay-wrapper {
+  div {
+    @media (min-width: 415px) {
+      max-width: 40vw;
+    }
+  }
+}
+
+.pagination {
+  justify-content: center;
+  li {
+    cursor: pointer;
+  }
+
+  @media (max-width: 415px) {
+    font-size: 0.5em;
+  }
+}

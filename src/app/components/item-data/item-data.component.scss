@@ -1,0 +1,37 @@
+.data-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    @media (max-width: 415px) {
+      flex-direction: column-reverse;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      margin: 0.4em;
+      @media (min-width: 415px) {
+        max-width: 50%;
+      }
+      span {
+        font-size: 0.8em;
+        margin-bottom: 1em;
+        h6 {
+          margin: 0;
+        }
+      }
+    }
+    .img-data {
+      @media (max-width: 415px) {
+        display: flex;
+        justify-content: center;
+      }
+      span{
+        img{
+          width: 10em;
+        }
+      }
+    }
+  }

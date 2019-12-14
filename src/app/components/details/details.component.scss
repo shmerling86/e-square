@@ -1,0 +1,14 @@
+.img-wrap {
+  display: flex;
+  justify-content: flex-end;
+  img {
+    width: 1.5em;
+    cursor: pointer;
+    margin: 1em 0.3em;
+    @media (max-width: 415px) {
+      width: 0.9em;
+    }
+  }
+}
+
+

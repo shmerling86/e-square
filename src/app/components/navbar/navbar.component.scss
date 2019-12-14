@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky;
+  .collapse {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: rgba(165, 165, 165, 0.7);
+          &:hover {
+            color: #fff;
+          }
+        }
+        .nav-link.active {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    img {
+      width: 2em;
+    }
+  }
+}

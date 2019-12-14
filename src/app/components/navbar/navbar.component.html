@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+    <a routerLink="bookShelf" class="navbar-brand"><img src="https://img.icons8.com/offices/100/000000/book-shelf.png">
+    </a>
+    <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="nav">
+        <ul class="navbar-nav" *ngIf="router.url === '/bookShelf' || router.url === '/wishList'">
+            <li class="nav-item">
+                <a routerLink="bookShelf" routerLinkActive="active" class="nav-link font-weight-bold px-3">BOOKSHELF</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="wishList" routerLinkActive="active" class="nav-link font-weight-bold px-3">WISHLIST</a>
+            </li>
+        </ul>
+    </div>
+</nav>

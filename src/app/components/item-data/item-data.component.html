@@ -1,0 +1,38 @@
+ <div class="data-wrapper">
+         <div class="data">
+            <span>
+                <h6>Title:</h6>
+                {{ (moreInfo['volumeInfo'].title != undefined ) ? moreInfo['volumeInfo'].title : 'No data' }}
+            </span>
+            <span>
+                <h6>Rating:</h6>
+                {{ (moreInfo['volumeInfo'].averageRating != undefined ) ? moreInfo['volumeInfo'].averageRating : 'No data' }}
+            </span>
+            <span>
+                <h6>Page Count:</h6>
+                {{  (moreInfo['volumeInfo'].pageCount != undefined ) ? moreInfo['volumeInfo'].pageCount : 'No data' }}
+            </span>
+            <span>
+                <h6>Price</h6>
+                {{  (moreInfo['saleInfo'].listPrice != undefined ) ? moreInfo['saleInfo'].listPrice.amount : 'No data' }}
+            </span>
+            <span>
+                <h6>Authors:</h6>
+                {{  (moreInfo['volumeInfo'].authors != undefined ) ? moreInfo['volumeInfo'].authors : 'No data' }}
+            </span>
+            <span>
+                <h6>Publisher:</h6>
+                {{  (moreInfo['volumeInfo'].publisher != undefined ) ? moreInfo['volumeInfo'].publisher : 'No data' }}
+            </span>
+            <span>
+                <h6>Published Date:</h6>
+                {{  (moreInfo['volumeInfo'].publishedDate != undefined ) ? moreInfo['volumeInfo'].publishedDate : 'No data' }}
+            </span>
+        </div>
+         <div class="img-data">
+            <span>
+                <img
+                    src="{{ (moreInfo['volumeInfo'].imageLinks.thumbnail != undefined ) ? moreInfo['volumeInfo'].imageLinks.thumbnail : 'https://sciences.ucf.edu/psychology/wp-content/uploads/sites/63/2019/09/No-Image-Available.png'  }}">
+            </span>
+        </div>  
+    </div> 
