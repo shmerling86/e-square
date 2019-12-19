@@ -14,7 +14,7 @@
                                 <span>{{ book.volumeInfo.title }}</span>
                                 <span class="book-img-wrap">
                                     <img
-                                        src="{{ (book.volumeInfo.imageLinks.thumbnail != undefined ) ? book.volumeInfo.imageLinks.thumbnail : 'https://sciences.ucf.edu/psychology/wp-content/uploads/sites/63/2019/09/No-Image-Available.png'  }}">
+                                        src="{{ (book.volumeInfo.imageLinks != undefined ) ? book.volumeInfo.imageLinks.thumbnail : 'https://sciences.ucf.edu/psychology/wp-content/uploads/sites/63/2019/09/No-Image-Available.png'  }}">
                                 </span>
                             </div>
                         </button>

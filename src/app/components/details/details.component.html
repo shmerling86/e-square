@@ -1,7 +1,10 @@
 <mat-dialog-content>
     <div class="img-wrap">
-        <img (click)='onAddToWishList()' src="https://img.icons8.com/ultraviolet/100/000000/pin.png">
-        <img (click)='closeMoreDetails()' src="https://img.icons8.com/ultraviolet/100/000000/xbox-x.png">
+        <img *ngIf='isAlreadyFavorite(data.id)' (click)='goToWishList()'
+            src="https://img.icons8.com/material/100/e74c3c/hearts--v1.png">
+        <img *ngIf='!isAlreadyFavorite(data.id)' (click)='onAddToWishList()'
+            src="https://img.icons8.com/material-outlined/100/000000/hearts.png">
+        <img (click)='closeMoreDetails()' src="https://img.icons8.com/ios-glyphs/30/000000/macos-close.png">
     </div>
     <item-data [moreInfo]='data'></item-data>
 </mat-dialog-content>

@@ -47,7 +47,7 @@ export class BooksComponent implements OnInit, OnDestroy {
     this.dialog.open(DetailsComponent, dialogConfig);
   }
 
-  onChangePage(pageOfItems: Array<any>) {
+  onChangePage(pageOfItems: Array<any>):void {
     this.pageOfItems = pageOfItems;
   }
 

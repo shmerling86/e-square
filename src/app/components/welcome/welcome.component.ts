@@ -12,17 +12,17 @@ import { ToastrService } from 'ngx-toastr';
 export class WelcomeComponent implements OnInit {
 
   updateForm: FormGroup
- 
+
   constructor(public router: Router, private toastr: ToastrService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.updateForm = new FormGroup({
       'name': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(20)])
     });
     this.updateForm.setValue({ name: 'Israel Israeli' })
   }
 
-  confirmAndNevigate(name) {
+  confirmAndNevigate(name): void {
     this.toastr.info(`Hi ${name}, welcome to BookApp`);
     this.router.navigate(['bookShelf']);
   }

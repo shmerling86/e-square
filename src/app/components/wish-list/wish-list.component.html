@@ -7,7 +7,7 @@
     <ng-template #list>
         <div class="favorite" *ngFor='let item of wishList; let i = index'>
             <div class="img-wrapper">
-                <img (click)='removeFromWishList(i)' src="https://img.icons8.com/ultraviolet/100/000000/unpin.png">
+                <img title="Remove from wishlist" (click)='removeFromWishList(i)' src="https://img.icons8.com/windows/32/000000/--broken-heart.png">
             </div>
             <item-data [moreInfo]='item'></item-data>
         </div>
